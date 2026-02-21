@@ -37,4 +37,7 @@ complex64 complex128
 we'll use more spcific types when we are concerned about performance and memory usage
 
 go is statically typed
+
+we can do same line declarations
+var1, var2 := val1, val2
 */
