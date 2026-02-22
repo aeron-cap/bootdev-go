@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"di"
+	"log"
+	"net/http"
+	// "os"
+)
 
 func Hello(name, language string) string {
 	if (name == "") {
@@ -17,5 +22,6 @@ func Hello(name, language string) string {
 }
 
 func main() {
-	fmt.Println(Hello("Aeron",  "English"))
+	// di.Greet(os.Stdout, Hello("Aeron",  "English"))
+	log.Fatal(http.ListenAndServe(":5001", http.HandlerFunc(di.MyGreeterHandler)))
 }
